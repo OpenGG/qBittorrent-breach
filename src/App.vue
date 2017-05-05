@@ -1,31 +1,28 @@
 <template>
   <div id="app">
-    <readme />
     <h3>CSRF demo</h3>
-    <test v-if="test" />
+    <csrf v-if="csrf" />
     <button v-else
-            @click="runTest">RUN</button>
+            @click="runCSRF">RUN</button>
   </div>
 </template>
 
 <script>
 
-import Readme from '../README.md';
-import Test from './test';
+import csrf from './csrf-demo';
 
 export default {
   components: {
-    Readme,
-    Test,
+    csrf,
   },
   data() {
     return {
-      test: false,
+      csrf: false,
     };
   },
   methods: {
-    runTest() {
-      this.test = true;
+    runCSRF() {
+      this.csrf = true;
     },
   },
 };

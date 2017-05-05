@@ -1,5 +1,5 @@
 <template>
-  <div class="test">
+  <div class="csrf">
     <div>
       Server address: {{server}}
     </div>
@@ -171,7 +171,7 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-.test
+.csrf
   margin: 10px 0
   padding: 10px
   border: 1px solid #ccc
@@ -180,7 +180,7 @@ export default {
 
 <style lang="stylus">
 
-.test
+.csrf
 
   .case-positive
     background: #F7BA2A
