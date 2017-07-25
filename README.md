@@ -2,6 +2,10 @@
 
 > qBittorrent security reports
 
+[http version](http://opengg.github.io/qBittorrent-breach/)
+
+[https version](https://opengg.github.io/qBittorrent-breach/)
+
 ## CSRF-related
 
 ### The WebUI implementation flaws
