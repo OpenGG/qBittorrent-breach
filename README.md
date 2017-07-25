@@ -12,7 +12,7 @@ This project demonstrates how attackers can control users' qBittorrent processes
 
 ### APIs affected
 
-All versions ( till the latest v3.3.12) are affected, with the following api being CSRF-flawed.
+Nearly all WebUI apis are CSRF-flawed, affecting qBittorrent <= v3.3.12.
 
 api                  | note
 -|-
@@ -48,4 +48,6 @@ api                  | note
 
 ### Security tips for users
 
-Util qBittorrent releases a new version fixing the above flaws, I strongly suggest users turn off WebUI and use native UI instead.
+If you are using qBittorrent v3.3.12 or below, I strongly suggest you to upgrade to [qBittorrent v3.3.13 or above](https://github.com/qbittorrent/qBittorrent/releases) immediately.
+
+If you do need a legacy version of qBittorrent and can not upgrade, I suggest you to turn off WebUI and use native UI instead.

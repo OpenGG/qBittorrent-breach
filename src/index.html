@@ -5,7 +5,7 @@
     <title>qbittorrent-breach</title>
   </head>
   <body>
-    <%= require('html-loader!markdown-loader!../README.md') %>
+    <%= require('html-loader!markdown-it-loader!../README.md') %>
     <div id="app"></div>
     <script>(function(a){for(var i=0;i<a.length;++i){b=document.createElement('link');b.rel='stylesheet';b.href=a[i];document.body.appendChild(b)}})(<%= JSON.stringify(htmlWebpackPlugin.files.css) %>)</script>
     <% htmlWebpackPlugin.files.js.forEach((js) => { %>
