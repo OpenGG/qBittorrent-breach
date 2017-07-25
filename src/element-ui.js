@@ -142,7 +142,7 @@ export default (Vue) => {
       $alert: MessageBox.alert,
       $confirm: MessageBox.confirm,
       $prompt: MessageBox.prompt,
-    },
+    }
   );
   // Vue.prototype.$msgbox = MessageBox;
   // Vue.prototype.$alert = MessageBox.alert;

@@ -18,7 +18,7 @@ const post =
             (key) => {
               const val = `${params[key]}`;
               return `${encodeURIComponent(key)}=${encodeURIComponent(val)}`;
-            },
+            }
           )
             .join('&');
       } else {
@@ -34,7 +34,7 @@ const post =
             } else {
               data.append(key, val);
             }
-          },
+          }
         );
       }
       xhr.onreadystatechange =

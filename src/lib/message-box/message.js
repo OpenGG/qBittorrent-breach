@@ -17,8 +17,8 @@ const msgboxMsg = function msgboxMsg(message, ...append) {
       h('ol', null,
         arr.map(
           content =>
-            h('li', null, content),
-        ),
+            h('li', null, content)
+        )
       )
     );
   }

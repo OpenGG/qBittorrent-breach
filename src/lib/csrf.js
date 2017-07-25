@@ -8,7 +8,7 @@ const CSRF =
       command,
       test: () =>
         fn(
-          server.resolve(command),
+          server.resolve(command)
         ),
       prepare,
       confirm,

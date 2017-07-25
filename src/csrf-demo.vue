@@ -53,26 +53,26 @@ export default {
     pendings() {
       return this.cases
         .filter(
-        ({
-          state,
-        }) => state === 'pending',
-      ).length;
+          ({
+            state,
+          }) => state === 'pending'
+        ).length;
     },
     positives() {
       return this.cases
         .filter(
-        ({
-          state,
-        }) => state === 'positive',
-      ).length;
+          ({
+            state,
+          }) => state === 'positive'
+        ).length;
     },
     negatives() {
       return this.cases
         .filter(
-        ({
-          state,
-        }) => state === 'negative',
-      ).length;
+          ({
+            state,
+          }) => state === 'negative'
+        ).length;
     },
   },
   async mounted() {
@@ -92,19 +92,19 @@ export default {
         const {
           value,
         } = await this.$prompt(
-            this.msgboxMsg(
-              'Your server address please?',
-            ),
-            msgboxOpts({
-              // message: ,
-              showInput: true,
-              title: 'server address',
-              inputValidator: str =>
-                !str || validate(str),
-              inputPlaceholder,
-              inputErrorMessage: 'Invalid url',
-            }),
-          );
+          this.msgboxMsg(
+            'Your server address please?'
+          ),
+          msgboxOpts({
+            // message: ,
+            showInput: true,
+            title: 'server address',
+            inputValidator: str =>
+              !str || validate(str),
+            inputPlaceholder,
+            inputErrorMessage: 'Invalid url',
+          })
+        );
         return value || inputPlaceholder;
       } catch (e) {
         console.error(e);
@@ -119,13 +119,13 @@ export default {
             title: item.desc,
             confirmButtonText: 'I\'m prepared',
             showClose: true,
-          }),
+          })
         );
 
         this.$set(
           item,
           'state',
-          'executing',
+          'executing'
         );
 
         await item.test();
@@ -135,14 +135,14 @@ export default {
           await this.$confirm(
             this.msgboxMsg(
               item.confirm,
-              'If yes, click "It\'s breached!", if not, click "It\'s fine."',
+              'If yes, click "It\'s breached!", if not, click "It\'s fine."'
             ),
             msgboxOpts({
               title: item.desc,
               confirmButtonText: 'It\'s breached!',
               showCancelButton: true,
               cancelButtonText: 'It\'s fine.',
-            }),
+            })
           );
           breached = true;
         } catch (e) {
@@ -155,13 +155,13 @@ export default {
         this.$set(
           item,
           'state',
-          breached ? 'positive' : 'negative',
+          breached ? 'positive' : 'negative'
         );
       } catch (e) {
         this.$set(
           item,
           'state',
-          'init',
+          'init'
         );
         console.error(e);
       }

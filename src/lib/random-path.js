@@ -8,7 +8,7 @@ const gen = () => {
 
 const get =
   () =>
-  randomPath;
+    randomPath;
 
 export default {
   gen,

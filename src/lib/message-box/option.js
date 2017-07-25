@@ -8,7 +8,7 @@ const msgboxOpts = opts =>
     confirmButtonText: 'confirm',
     cancelButtonText: 'cancel',
   },
-    opts,
+  opts
   );
 
 export default msgboxOpts;
