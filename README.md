@@ -2,7 +2,7 @@
 
 > qBittorrent security reports
 
-[http version](http://opengg.github.io/qBittorrent-breach/)
+[http version](http://vast-lake-23856.herokuapp.com/)
 
 [https version](https://opengg.github.io/qBittorrent-breach/)
 
